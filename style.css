@@ -18,7 +18,7 @@ input[type="checkbox"] {
   display: block;
   width: 120px;
   height: 60px;
-  background: #092c3e;
+  border: 2px solid #092c3e;
   cursor: pointer;
   border-radius: 40px;
   overflow: hidden;
@@ -26,8 +26,9 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked ~ .check {
-  background: #fff;
   box-shadow: 0 0 0 1200px #092c3e;
+  border: 2px solid #fff;
+  background: #092c3e;
 }
 
 .check:before {
@@ -37,14 +38,14 @@ input[type="checkbox"]:checked ~ .check {
   left: 6px;
   width: 48px;
   height: 48px;
-  box-shadow: inset 10px -10px 0 0 #fff;
   border-radius: 50%;
   transition: 0.5s;
+  background: #f28c38;
 }
 
 input[type="checkbox"]:checked ~ .check:before {
-  background: #f28c38;
+  background: #092c3e;
+  box-shadow: inset 10px -10px 0 0 #fff;
   transform: translateX(calc(120px - 6px - 48px));
   left: 0;
-  box-shadow: none;
 }
