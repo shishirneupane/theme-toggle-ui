@@ -35,32 +35,16 @@ input[type="checkbox"]:checked ~ .check {
   position: absolute;
   top: 6px;
   left: 6px;
-  background: #fff;
   width: 48px;
   height: 48px;
+  box-shadow: inset 10px -10px 0 0 #fff;
   border-radius: 50%;
   transition: 0.5s;
 }
 
 input[type="checkbox"]:checked ~ .check:before {
-  transform: translateX(-50px);
+  background: #f28c38;
+  transform: translateX(calc(120px - 6px - 48px));
   left: 0;
-}
-
-.check:after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  right: 0;
-  background: #092c3e;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  transition: 0.5s;
-  transform: translateX(50px);
-}
-
-input[type="checkbox"]:checked ~ .check:after {
-  transform: translateX(0px);
-  right: 6px;
+  box-shadow: none;
 }
